@@ -11,7 +11,7 @@ data_path = 'districts.csv'
 def load_data():
     data = pd.read_csv(data_path)
     data.set_index('Date',inplace=True)
-    data.drop(index='2021-05-19',inplace=True)
+    #data.drop(index='2021-05-19',inplace=True)
     return data
 
 # Create a text element and let the reader know the data is loading.
@@ -73,9 +73,9 @@ st.subheader('Avg cases')
 india_chart = plot_timeseries(india_df['meanval'])
 st.plotly_chart(india_chart)
 
-st.subheader('Recovery vs Cases')
-india_chart = plot_timeseries(india_df['recovery_vs_cases'])
-st.plotly_chart(india_chart)
+# st.subheader('Recovery vs Cases')
+# india_chart = plot_timeseries(india_df['recovery_vs_cases'])
+# st.plotly_chart(india_chart)
 
 
 states = data['State'].unique()
@@ -105,9 +105,9 @@ st.subheader('Avg cases')
 state_chart = plot_timeseries(state_df['meanval'])
 st.plotly_chart(state_chart)
 
-st.subheader('Recovery vs Cases')
-state_chart = plot_timeseries(state_df['recovery_vs_cases'])
-st.plotly_chart(state_chart)
+# st.subheader('Recovery vs Cases')
+# state_chart = plot_timeseries(state_df['recovery_vs_cases'])
+# st.plotly_chart(state_chart)
 
 state_chart = plot_timeseries(state_df['daily_cases'])
 st.plotly_chart(state_chart)
@@ -126,7 +126,7 @@ st.subheader('Avg cases')
 district_chart = plot_timeseries(district_df['meanval'])
 st.plotly_chart(district_chart)
 
-st.subheader('Recovery vs Cases')
-district_chart = plot_timeseries(district_df['recovery_vs_cases'])
-st.plotly_chart(district_chart)
+# st.subheader('Recovery vs Cases')
+# district_chart = plot_timeseries(district_df['recovery_vs_cases'])
+# st.plotly_chart(district_chart)
 
