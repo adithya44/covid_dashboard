@@ -62,8 +62,8 @@ def get_detailed_data(df,state=None,district=None):
 india_df = get_detailed_data(data)
 
 
-st.subheader('India data')
-st.write(data)
+# st.subheader('India data')
+# st.write(data)
 
 st.subheader('Daily cases')
 india_chart = plot_timeseries(india_df['daily_cases'])
@@ -94,8 +94,8 @@ st.write('You selected:', state_selected)
 
 
 state_df = get_detailed_data(data,state_selected)
-st.subheader('State data')
-st.write(state_df)
+# st.subheader('State data')
+# st.write(state_df)
 
 st.subheader('Daily cases')
 state_chart = plot_timeseries(state_df['daily_cases'])
@@ -114,8 +114,8 @@ st.plotly_chart(state_chart)
 
 
 district_df = get_detailed_data(data,state_selected,district_selected)
-st.subheader('District data')
-st.write(district_df)
+# st.subheader('District data')
+# st.write(district_df)
 
 st.subheader('Daily cases')
 district_chart = plot_timeseries(district_df['daily_cases'])
