@@ -62,7 +62,7 @@ def get_detailed_data(df,state=None,district=None):
 india_df = get_detailed_data(data)
 
 
-# st.subheader('India data')
+st.subheader('India level charts')
 # st.write(data)
 
 st.subheader('India-Daily cases')
@@ -73,9 +73,9 @@ st.subheader('India-Avg cases')
 india_chart = plot_timeseries(india_df['meanval'])
 st.plotly_chart(india_chart)
 
-# st.subheader('Recovery vs Cases')
-# india_chart = plot_timeseries(india_df['recovery_vs_cases'])
-# st.plotly_chart(india_chart)
+st.subheader('Recovery vs Cases')
+india_chart = plot_timeseries(india_df['recovery_vs_cases'])
+st.plotly_chart(india_chart)
 
 
 states = data['State'].unique()
@@ -94,7 +94,7 @@ st.write('You selected:', state_selected)
 
 
 state_df = get_detailed_data(data,state_selected)
-# st.subheader('State data')
+st.subheader('State level charts')
 # st.write(state_df)
 
 st.write('Daily cases ',state_selected)
@@ -105,16 +105,16 @@ st.subheader('Avg cases ',state_selected)
 state_chart = plot_timeseries(state_df['meanval'])
 st.plotly_chart(state_chart)
 
-# st.subheader('Recovery vs Cases')
-# state_chart = plot_timeseries(state_df['recovery_vs_cases'])
-# st.plotly_chart(state_chart)
+st.subheader('Recovery vs Cases')
+state_chart = plot_timeseries(state_df['recovery_vs_cases'])
+st.plotly_chart(state_chart)
 
 state_chart = plot_timeseries(state_df['daily_cases'])
 st.plotly_chart(state_chart)
 
 
 district_df = get_detailed_data(data,state_selected,district_selected)
-# st.subheader('District data')
+st.subheader('District level charts')
 # st.write(district_df)
 
 st.subheader('Daily cases',district_selected )
@@ -126,7 +126,7 @@ st.subheader('Avg cases',district_selected)
 district_chart = plot_timeseries(district_df['meanval'])
 st.plotly_chart(district_chart)
 
-# st.subheader('Recovery vs Cases')
-# district_chart = plot_timeseries(district_df['recovery_vs_cases'])
-# st.plotly_chart(district_chart)
+st.subheader('Recovery vs Cases')
+district_chart = plot_timeseries(district_df['recovery_vs_cases'])
+st.plotly_chart(district_chart)
 
