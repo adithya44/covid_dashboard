@@ -11,7 +11,7 @@ data_path = 'districts.csv'
 def load_data():
     data = pd.read_csv(data_path)
     data.set_index('Date',inplace=True)
-    data.drop(index='2021-05-27',inplace=True)
+    data.drop(index='2021-05-31',inplace=True)
     return data
 
 # Create a text element and let the reader know the data is loading.
