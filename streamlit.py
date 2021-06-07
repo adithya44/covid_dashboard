@@ -109,9 +109,6 @@ st.subheader('Recovery vs Cases')
 state_chart = plot_timeseries(state_df['recovery_vs_cases'])
 st.plotly_chart(state_chart)
 
-state_chart = plot_timeseries(state_df['daily_cases'])
-st.plotly_chart(state_chart)
-
 
 district_df = get_detailed_data(data,state_selected,district_selected)
 st.subheader('District level charts')
