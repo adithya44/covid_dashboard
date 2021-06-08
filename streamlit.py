@@ -73,6 +73,11 @@ st.subheader('India-Avg cases')
 india_chart = plot_timeseries(india_df['meanval'])
 st.plotly_chart(india_chart)
 
+st.subheader('India-Active cases')
+india_chart = plot_timeseries(india_df['active_cases'])
+st.plotly_chart(india_chart)
+
+
 st.subheader('Recovery vs Cases')
 india_chart = plot_timeseries(india_df['recovery_vs_cases'])
 st.plotly_chart(india_chart)
@@ -105,6 +110,10 @@ st.subheader('Avg cases ',state_selected)
 state_chart = plot_timeseries(state_df['meanval'])
 st.plotly_chart(state_chart)
 
+st.write('Active cases ',state_selected)
+state_chart = plot_timeseries(state_df['active_cases'])
+st.plotly_chart(state_chart)
+
 st.subheader('Recovery vs Cases')
 state_chart = plot_timeseries(state_df['recovery_vs_cases'])
 st.plotly_chart(state_chart)
@@ -118,9 +127,12 @@ st.subheader('Daily cases',district_selected )
 district_chart = plot_timeseries(district_df['daily_cases'])
 st.plotly_chart(district_chart)
 
-
 st.subheader('Avg cases',district_selected)
 district_chart = plot_timeseries(district_df['meanval'])
+st.plotly_chart(district_chart)
+
+st.subheader('Active cases',district_selected )
+district_chart = plot_timeseries(district_df['active_cases'])
 st.plotly_chart(district_chart)
 
 st.subheader('Recovery vs Cases')
